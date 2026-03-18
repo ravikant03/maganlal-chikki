@@ -1,8 +1,17 @@
 module.exports = {
   images: {
     remotePatterns: [
-      new URL("https://maganlalchikki.in/wp-content/uploads/2020/03/**"),
-      new URL("https://appy.trycatchtech.com/uploads/maganlalchikki/**"),
+      {
+        protocol: "https",
+        hostname: "maganlalchikki.in",
+        pathname: "/wp-content/uploads/2020/03/**",
+      },
+      {
+        protocol: "https",
+        hostname: "appy.trycatchtech.com",
+        pathname: "/uploads/maganlalchikki/**",
+      },
     ],
+    domains: ["maganlalchikki.in"],
   },
 };
