@@ -8,18 +8,16 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
+import { TiShoppingCart } from "react-icons/ti";
+import { FiEye } from "react-icons/fi";
+import { IoMdHeartEmpty } from "react-icons/io";
 
-function ProductCard({ title, price, image, description }) {
+function ProductCard({ title, price, image }) {
   return (
     <div>
       <Card className="w-full my-2 md:w-[1/3] md:h-85  lg:h-100 group hover:-translate-y-2 hover:cursor-pointer duration-150 xl:w-[1/4]">
-        <CardHeader>
-          <CardTitle className="text-pretty text-md lg:text-lg">
-            {title}
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="h-50  w-full md:h-30 overflow-hidden">
+        <CardContent className="flex flex-col h-full">
+          <div className="h-[60%]! w-full md:h-30 overflow-hidden relative">
             <Image
               src={image}
               alt="image"
@@ -27,11 +25,29 @@ function ProductCard({ title, price, image, description }) {
               height={1000}
               className="h-full w-full object-cover group-hover:scale-105 duration-150"
             />
-          </div>
-          <p className="text-md lg:text-lg font-bold my-2">Rs.{price}</p>
 
-          <p className="line-clamp-2 lg:line-clamp-3  text-xs lg:text-sm text-start mb-1">
-            {description}
+            {/* layover */}
+            <div className="absolute top-0 left-0 h-full w-full bg-linear-to-t from-black/80 to-transparent px-2 hidden group-hover:block">
+              <div className="my-[25%]">
+                <p className="bg-[#0A4DB8] rounded-full flex items-center justify-center py-2 gap-3 hover:-translate-y-2 duration-150">
+                  <TiShoppingCart className="text-white text-lg transition-transform duration-150 " />
+                  <span className="text-white font-semibold">Add to Cart</span>
+                </p>
+                <div className="flex items-center justify-around gap-5 my-4">
+                  {/* icons */}
+                  <div className="flex items-center justify-center p-2 bg-white rounded-full w-fit hover:-translate-y-2 duration-150">
+                    <FiEye className="text-xl" />
+                  </div>
+                  <div className="flex items-center justify-center p-2 bg-white rounded-full w-fit  hover:-translate-y-2 duration-150">
+                    <IoMdHeartEmpty className="text-xl" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p className="text-lg my-3 text-start ">{title}</p>
+          <p className="mt-auto text-md lg:text-2xl text-[#0A4DB8] font-bold my-2">
+            Rs.{price}
           </p>
         </CardContent>
       </Card>

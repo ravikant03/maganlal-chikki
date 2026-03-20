@@ -3,7 +3,7 @@ import SectionThreeClient from "./SectionThree.client";
 
 async function getSectionThreeData() {
   const response = await fetch(
-    `https://appy.trycatchtech.com/v3/maganlalchikki/product_list?category_id=${1}`,
+    `https://appy.trycatchtech.com/v3/maganlalchikki/product_list?category_id=${5}`,
     {
       cache: "no-store",
     },

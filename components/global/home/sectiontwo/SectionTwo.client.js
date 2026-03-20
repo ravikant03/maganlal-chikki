@@ -13,8 +13,8 @@ function SectionTwoclient({ data }) {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{
-                once: false, // 👈 IMPORTANT (allows going back)
-                amount: 0.3, // 👈 30% visible triggers animation
+                once: true,
+                amount: 0.3,
               }}
               transition={{ duration: 0.6, ease: "easeOut", delay: ind * 0.2 }}
               key={ind}
