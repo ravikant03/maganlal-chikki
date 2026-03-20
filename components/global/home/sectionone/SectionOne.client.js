@@ -36,7 +36,7 @@ function SectionOneClient({ data }) {
                 src={el.image}
                 alt="banner"
                 width={1200}
-                height={500}
+                height={1000}
                 className="w-full h-full object-cover"
                 priority={ind === 0}
               />
