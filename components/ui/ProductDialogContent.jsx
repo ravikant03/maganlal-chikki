@@ -7,8 +7,14 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import Image from "next/image";
+import { useDispatch } from "react-redux";
+import { addToCart } from "@/redux/features/cart/cart.Slice";
+import { FaRegHeart } from "react-icons/fa";
 
 export default function ProductDialogContent({ product, open, setOpen }) {
+
+  const dispatch = useDispatch();
+
   if (!product) return null;
 
   return (
@@ -50,12 +56,12 @@ export default function ProductDialogContent({ product, open, setOpen }) {
 
             {/* ✅ Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 mt-3">
-              <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+              <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition" onClick={() => dispatch(addToCart(product))}>
                 Add to Cart
               </button>
-              <button className="border px-4 py-2 rounded hover:bg-gray-100 transition">
-                Buy Now
-              </button>
+              <div className="border-2! p-3 rounded-full hover:bg-gray-100 transition flex items-center justify-center hover:animate-bounce duration-150 cursor-pointer">
+               <FaRegHeart className="text-lg lg:text-2xl"/>
+              </div>
             </div>
           </div>
         </div>
