@@ -13,14 +13,11 @@ export default function ProductDialogContent({ product, open, setOpen }) {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      
       {/* ✅ Responsive width */}
-      <DialogContent className="max-w-none w-[95vw] sm:w-[90vw] md:w-[800px] lg:w-[1000px] p-4 md:p-6">
-        
+      <DialogContent className="max-w-none! w-[95vw] sm:w-[90vw] !md:w-[800px]  p-4 md:p-6">
         <div className="flex flex-col md:flex-row gap-5 md:gap-6 my-7">
-          
           {/* ✅ Image */}
-          <div className="w-full md:w-1/2 h-[220px] sm:h-[300px] md:h-[400px] rounded-lg overflow-hidden">
+          <div className="w-full md:w-1/2 h-55 sm:h-75 md:h-100 rounded-lg overflow-hidden">
             <Image
               src={product.images[0]}
               alt="product"
@@ -32,7 +29,6 @@ export default function ProductDialogContent({ product, open, setOpen }) {
 
           {/* ✅ Content */}
           <div className="w-full md:w-1/2 flex flex-col gap-3">
-            
             <DialogHeader>
               <DialogTitle className="text-lg sm:text-xl md:text-2xl font-bold leading-tight">
                 {product.title}
@@ -61,9 +57,7 @@ export default function ProductDialogContent({ product, open, setOpen }) {
                 Buy Now
               </button>
             </div>
-
           </div>
-
         </div>
       </DialogContent>
     </Dialog>

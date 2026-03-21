@@ -3,12 +3,15 @@ import { Input } from "../ui/input";
 import { IoSearch } from "react-icons/io5";
 import { IoPersonOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa6";
-import { MdOutlineShoppingCart } from "react-icons/md";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Separator } from "../ui/separator";
 import Link from "next/link";
+import CartIcon from "../ui/CartIcon";
+
 
 const Header = () => {
+  
+
   return (
     <>
       {/* lg screen */}
@@ -40,9 +43,13 @@ const Header = () => {
             </div>
           </div>
           <div className="flex items-center gap-10">
-            <IoPersonOutline className="text-3xl cursor-pointer" />
-            <FaRegHeart className="text-3xl cursor-pointer" />
-            <MdOutlineShoppingCart className="text-3xl cursor-pointer" />
+            <div>
+              <IoPersonOutline className="text-3xl cursor-pointer" />
+            </div>
+            <div>
+              <FaRegHeart className="text-3xl cursor-pointer" />
+            </div>
+            <CartIcon/>
           </div>
         </div>
 
@@ -65,7 +72,7 @@ const Header = () => {
             <IoSearch className="text-2xl md:text-3xl cursor-pointer" />
             <IoPersonOutline className="text-2xl md:text-3xl cursor-pointer" />
             <FaRegHeart className="hidden text-3xl md:block cursor-pointer" />
-            <MdOutlineShoppingCart className="text-2xl md:text-3xl cursor-pointer" />
+            <CartIcon/>
             <GiHamburgerMenu className="text-2xl md:text-3xl cursor-pointer" />
           </div>
         </div>

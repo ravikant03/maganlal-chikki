@@ -10,7 +10,7 @@ function SectionThreeClient({ data }) {
 
   
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const [open, setOpen] = useState(false);
+
 
   const visibleProducts = showAll ? data : data.slice(0, 4);
 
@@ -24,16 +24,9 @@ function SectionThreeClient({ data }) {
             {visibleProducts.map((el) => (
               <motion.div
                 key={el.id}
-                onClick={() => {
-                  setSelectedProduct(el);   // ✅ store clicked product
-                  setOpen(true);            // ✅ open dialog
-                }}
               >
                 <ProductCard
-                  title={el.title}
-                  price={el.price}
-                  description={el.full_description}
-                  image={el.images[0]}
+                  product={el}
                 />
               </motion.div>
             ))}
@@ -53,11 +46,7 @@ function SectionThreeClient({ data }) {
       </section>
 
       {/* ✅ PASS DATA TO DIALOG */}
-      <ProductDialogContent
-        product={selectedProduct}
-        open={open}
-        setOpen={setOpen}
-      />
+     
     </>
   );
 }
