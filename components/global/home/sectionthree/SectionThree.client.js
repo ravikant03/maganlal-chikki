@@ -46,7 +46,7 @@ function SectionThreeClient({ data }) {
           onClick={() => setShowAll((prev) => !prev)}
         >
           <p className="bg-[#0A4DB8] border text-white px-3 py-1 text-lg">
-            {showAll ? "Show less" : "View All"}
+            {showAll ? "Show less" : "Show All"}
           </p>
         </div>
       </div>
