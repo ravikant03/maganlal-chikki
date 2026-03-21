@@ -1,3 +1,5 @@
+"use client"
+
 import {
   Card,
   CardAction,
@@ -12,10 +14,14 @@ import { TiShoppingCart } from "react-icons/ti";
 import { FiEye } from "react-icons/fi";
 import { IoMdHeartEmpty } from "react-icons/io";
 
+
 function ProductCard({ title, price, image }) {
+
+
+
   return (
     <div>
-      <Card className="w-full my-2 md:w-[1/3] md:h-85  lg:h-100 group hover:-translate-y-2 hover:cursor-pointer duration-150 xl:w-[1/4]">
+      <Card className="w-full my-2 md:w-[1/3] md:h-85  lg:h-100 group hover:-translate-y-2 hover:cursor-pointer duration-150 xl:w-[1/4] hover:shadow-xl" >
         <CardContent className="flex flex-col h-full">
           <div className="h-[60%]! w-full md:h-30 overflow-hidden relative">
             <Image
@@ -27,7 +33,7 @@ function ProductCard({ title, price, image }) {
             />
 
             {/* layover */}
-            <div className="absolute top-0 left-0 h-full w-full bg-linear-to-t from-black/80 to-transparent px-2 hidden group-hover:block">
+            <div className="absolute top-0 left-0 h-full w-full bg-linear-to-t from-black/80 to-transparent px-2 md:hidden group-hover:block">
               <div className="my-[25%]">
                 <p className="bg-[#0A4DB8] rounded-full flex items-center justify-center py-2 gap-3 hover:-translate-y-2 duration-150">
                   <TiShoppingCart className="text-white text-lg transition-transform duration-150 " />

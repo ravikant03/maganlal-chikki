@@ -17,16 +17,16 @@ async function getSectionThreeData(id = 1) {
 }
 
 const SectionThreeServer = async () => {
-  const data = await getSectionThreeData(1);
-  const data2 = await getSectionThreeData(2);
-  const data3 = await getSectionThreeData(4);
-  const data4 = await getSectionThreeData(5);
+  const chikki = await getSectionThreeData(1);
+  const fudge = await getSectionThreeData(2);
+  const dryFruit = await getSectionThreeData(4);
+  const namkeen = await getSectionThreeData(5);
   return (
     <>
-      <SectionThreeClient data={data} />
-      <SectionThreeClient data={data2} />
-      <SectionThreeClient data={data3} />
-      <SectionThreeClient data={data4} />
+      <SectionThreeClient data={chikki} />
+      <SectionThreeClient data={fudge} />
+      <SectionThreeClient data={dryFruit} />
+      <SectionThreeClient data={namkeen} />
     </>
   );
 };
