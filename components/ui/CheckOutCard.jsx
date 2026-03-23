@@ -25,8 +25,8 @@ function CheckOutCard() {
         <CardTitle>
           {/* order overview */}
           <h2 className="flex items-center justify-start gap-3 bg-blue-700 text-white py-5 px-3">
-            <FiShoppingBag className="text-2xl" />
-            <span className="capitalize text-2xl font-bold">
+            <FiShoppingBag className="text-lg md:text-2xl" />
+            <span className="capitalize text-lg md:text-2xl font-bold">
               Order Overview
             </span>
           </h2>
@@ -53,68 +53,87 @@ function CheckOutCard() {
           <div className="flex flex-col gap-5">
             {/* subtotal */}
             <div className="flex items-center justify-between">
-              <span className="text-gray-700 capitalize">Subtotal</span>
-              <span className="font-bold text-black">Rs. 700</span>
+              <span className="text-gray-700 capitalize text-xs md:text-base">
+                Subtotal
+              </span>
+              <span className="font-bold text-black text-xs md:text-base">
+                Rs. 700
+              </span>
             </div>
             {/* delivery */}
             <div className="flex flex-col gap-2">
-              <span>Delivery</span>
+              <span className="text-xs md:text-base">Delivery</span>
               {/* radio input */}
               <div className="flex flex-col gap-2 ml-5">
-                <label>
-                  <input type="radio" defaultChecked className="mr-2" />
+                <label className="text-xs md:text-base">
+                  <input
+                    type="radio"
+                    defaultChecked
+                    className="mr-2"
+                    name="delivery"
+                  />
                   Standard -Rs.49
                 </label>
-                <label>
-                  <input type="radio" className="mr-2" />
+                <label className="text-xs md:text-base">
+                  <input type="radio" className="mr-2" name="delivery" />
                   Express -Rs.99
                 </label>
-                <label>
-                  <input type="radio" className="mr-2" />
+                <label className="text-xs md:text-base">
+                  <input type="radio" className="mr-2" name="delivery" />
                   Free(orders above 500)
                 </label>
               </div>
             </div>
             {/* estimated tax */}
             <div className="flex items-center justify-between">
-              <span className="capitalize text-gray-700">Estimated Tax</span>
-              <span className="text-black font-bold">Rs. 100</span>
+              <span className="capitalize text-gray-700 text-xs md:text-base">
+                Estimated Tax
+              </span>
+              <span className="text-black font-bold text-xs md:text-base">
+                Rs. 100
+              </span>
             </div>
             {/* savings */}
             <div className="flex items-center justify-between">
-              <span className="capitalize text-gray-700">Savings</span>
-              <span className="text-black font-bold">Rs. 00 </span>
+              <span className="capitalize text-gray-700 text-xs md:text-base">
+                Savings
+              </span>
+              <span className="text-black font-bold text-xs md:text-base">
+                Rs. 00{" "}
+              </span>
             </div>
             <Separator className="bg-blue-700" />
             {/* grand total */}
             <div className="flex items-center justify-between">
-              <span className="capitalize font-bold text-black text-xl">
+              <span className="capitalize font-bold text-black text-lg md:text-xl">
                 Grand Total
               </span>
-              <span className="text-blue-700 font-bold text-2xl">Rs. 1000</span>
+              <span className="text-blue-700 font-bold text-xl md:text-2xl">
+                Rs. 1000
+              </span>
             </div>
             <Separator className="bg-blue-700" />
 
             {/* complete purchase */}
             <div className="rounded-full w-full flex items-center justify-center gap-3 bg-blue-700 py-3 cursor-pointer group">
-              <span className="font-bold text-white text-xl">
+              <span className="font-bold text-white text-lg md:text-xl">
                 Complete Purchase
               </span>
-              <GiShoppingCart className="text-white text-xl group-hover:translate-x-2 transition-all duration-150" />
+              <GiShoppingCart className="text-white text-lg md:text-xl group-hover:translate-x-2 transition-all duration-150" />
             </div>
             <Separator />
 
             {/* secure payment methods */}
             <CardFooter className="flex items-center justify-center">
-              <div >
+              <div>
                 <span className="uppercase text-gray-400 text-sm font-semibold">
                   secure payment methods
                 </span>
                 <ul className="flex items-center justify-center gap-5 mt-3">
-                  <CiCreditCard1 className="text-2xl text-gray-500! cursor-pointer"/>
-                  <BsPaypal className="text-2xl text-gray-500! cursor-pointer"/>
-                  <FaGooglePay className="text-2xl text-gray-500! cursor-pointer"/>
-                  <FaBuildingColumns className="text-2xl text-gray-500! cursor-pointer" />
+                  <CiCreditCard1 className="text-lg md:text-2xl text-gray-500! cursor-pointer hover:text-blue-700" />
+                  <BsPaypal className="text-lg md:text-2xl text-gray-500! cursor-pointer hover:text-blue-700" />
+                  <FaGooglePay className="text-lg md:text-2xl text-gray-500! cursor-pointer hover:text-blue-700" />
+                  <FaBuildingColumns className="text-lg md:text-2xl text-gray-500! cursor-pointer hover:text-blue-700" />
                 </ul>
               </div>
             </CardFooter>
