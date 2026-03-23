@@ -12,6 +12,5 @@ module.exports = {
         pathname: "/uploads/maganlalchikki/**",
       },
     ],
-    domains: ["maganlalchikki.in"],
   },
 };
