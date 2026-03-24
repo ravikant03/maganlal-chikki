@@ -28,7 +28,7 @@ function SectionOneClient({ data }) {
             disableOnInteraction: false,
           }}
           pagination={{ clickable: true }}
-          className="w-full h-30 md:h-60 lg:h-80 xl:h-100"
+          className="w-full h-50 md:h-70 lg:h-100 xl:h-120"
         >
           {data.map((el, ind) => (
             <SwiperSlide key={ind}>
@@ -36,8 +36,8 @@ function SectionOneClient({ data }) {
                 src={el.image}
                 alt="banner"
                 width={1200}
-                height={1000}
-                className="w-full h-full object-cover"
+                height={1200}
+                className="w-full h-full object-center md:object-cover"
                 priority={ind === 0}
               />
             </SwiperSlide>

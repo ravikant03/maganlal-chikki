@@ -7,11 +7,9 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { Separator } from "../ui/separator";
 import Link from "next/link";
 import CartIcon from "../ui/CartIcon";
-
+import Logo from "@/public/nextLogo.png";
 
 const Header = () => {
-  
-
   return (
     <>
       {/* lg screen */}
@@ -21,7 +19,7 @@ const Header = () => {
           <Link href={"/"}>
             <div className="lg:h-fit lg:w-fit xl:w-70 cursor-pointer">
               <Image
-                src="https://maganlalchikki.in/wp-content/uploads/2020/03/web-logo-3.png"
+                src={Logo}
                 alt="logo"
                 width={500}
                 height={500}
@@ -49,7 +47,7 @@ const Header = () => {
             <div>
               <FaRegHeart className="text-3xl cursor-pointer" />
             </div>
-            <CartIcon/>
+            <CartIcon />
           </div>
         </div>
 
@@ -72,7 +70,7 @@ const Header = () => {
             <IoSearch className="text-2xl md:text-3xl cursor-pointer" />
             <IoPersonOutline className="text-2xl md:text-3xl cursor-pointer" />
             <FaRegHeart className="hidden text-3xl md:block cursor-pointer" />
-            <CartIcon/>
+            <CartIcon />
             <GiHamburgerMenu className="text-2xl md:text-3xl cursor-pointer" />
           </div>
         </div>

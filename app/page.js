@@ -5,35 +5,34 @@ import SectionOneLoading from "@/components/global/home/sectionone/SectionOneLoa
 
 import SectionTwo from "@/components/global/home/sectiontwo/SectionTwo.server";
 
-import SectionThree from "@/components/global/home/sectionthree/SectionThree.server"
+import SectionThree from "@/components/global/home/sectionthree/SectionThree.server";
 
-
-
+import SectionFour from "@/components/global/home/sectionfour/SectionFour";
 
 export const metadata = {
   title: "Home",
 };
 
 export default function Page() {
-
-  
-
   return (
     <main>
-  
       <Suspense fallback={<SectionOneLoading />}>
         <SectionOne />
       </Suspense>
 
-       <Suspense fallback={<SectionOneLoading />}>
+      <Suspense fallback={<SectionOneLoading />}>
         <SectionTwo />
       </Suspense>
 
-      <Suspense fallback={<SectionOneLoading/>}>
-        <SectionThree/>
+       <Suspense fallback={<SectionOneLoading />}>
+        <SectionFour />
       </Suspense>
 
-     
+      <Suspense fallback={<SectionOneLoading />}>
+        <SectionThree />
+      </Suspense>
+
+      
     </main>
   );
 }
