@@ -2,12 +2,12 @@ import Image from "next/image";
 import { Input } from "../ui/input";
 import { IoSearch } from "react-icons/io5";
 import { IoPersonOutline } from "react-icons/io5";
-import { FaRegHeart } from "react-icons/fa6";
-import { GiHamburgerMenu } from "react-icons/gi";
+import SidebarToggle from "../ui/SidebarToggle";
 import { Separator } from "../ui/separator";
 import Link from "next/link";
 import CartIcon from "../ui/CartIcon";
-import Logo from "@/public/nextLogo.png";
+import WhislistIcon from "../ui/WhislistIcon";
+import Sidebar from "../ui/Sidebar";
 
 const Header = () => {
   return (
@@ -19,7 +19,7 @@ const Header = () => {
           <Link href={"/"}>
             <div className="lg:h-fit lg:w-fit xl:w-70 cursor-pointer">
               <Image
-                src={Logo}
+                src="/nextLogo.png"
                 alt="logo"
                 width={500}
                 height={500}
@@ -44,9 +44,7 @@ const Header = () => {
             <div>
               <IoPersonOutline className="text-3xl cursor-pointer" />
             </div>
-            <div>
-              <FaRegHeart className="text-3xl cursor-pointer" />
-            </div>
+            <WhislistIcon />
             <CartIcon />
           </div>
         </div>
@@ -56,7 +54,7 @@ const Header = () => {
           {/* logo */}
           <div className="w-30 h-fit md:w-60 md:h-fit">
             <Image
-              src="https://maganlalchikki.in/wp-content/uploads/2020/03/web-logo-3.png"
+              src="/nextLogo.png"
               alt="logo"
               width={200}
               height={200}
@@ -69,9 +67,10 @@ const Header = () => {
             {/* search */}
             <IoSearch className="text-2xl md:text-3xl cursor-pointer" />
             <IoPersonOutline className="text-2xl md:text-3xl cursor-pointer" />
-            <FaRegHeart className="hidden text-3xl md:block cursor-pointer" />
+            <WhislistIcon />
             <CartIcon />
-            <GiHamburgerMenu className="text-2xl md:text-3xl cursor-pointer" />
+            <SidebarToggle/>
+            <Sidebar/>
           </div>
         </div>
         <Separator className="mt-3" />

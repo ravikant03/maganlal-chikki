@@ -16,7 +16,7 @@ const Content = ({ icon: Icon, title, text }) => {
 
 function SectionFour() {
   return (
-    <section className="px-2 md:px-10 lg:px-20 bg-gray-100">
+    <section className="px-2 md:px-10 lg:px-20 bg-gray-100 mb-5">
       <div className=" w-full py-12 flex flex-col md:flex-row items-center justify-between gap-7">
         {/* shipping */}
         <Content

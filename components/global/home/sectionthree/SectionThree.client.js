@@ -3,34 +3,28 @@
 import ProductCard from "@/components/ui/ProductCard";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import ProductDialogContent from "@/components/ui/ProductDialogContent";
+import Image from "next/image";
 
-function SectionThreeClient({ data }) {
+
+function SectionThreeClient({ data, imageUrl }) {
   const [showAll, setShowAll] = useState(false);
 
-  
-  const [selectedProduct, setSelectedProduct] = useState(null);
-
-
-  const visibleProducts = showAll ? data : data.slice(0, 4);
+  const visibleProducts = showAll ? data : data.slice(0, 3);
 
   return (
     <>
-      <section className="py-6">
-        <div className="px-2 md:px-10 xl:px-20">
-
-          <motion.div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 xl:grid-cols-4">
-            
+      <section className="py-3 md:flex md:gap-10">
+        {/* side image */}
+        <div className="md:h-110 lg:h-130 md:w-[30%] lg:w-[25%] hidden md:block mb-5">
+          <Image src={imageUrl} alt="image" width={500} height={500} className="w-full h-full object-center" />
+        </div>
+        <div className="md:w-[70%] lg:w-[75%]">
+          <motion.div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 md:gap-6 lg:grid-cols-3">
             {visibleProducts.map((el) => (
-              <motion.div
-                key={el.id}
-              >
-                <ProductCard
-                  product={el}
-                />
+              <motion.div key={el.id}>
+                <ProductCard product={el} />
               </motion.div>
             ))}
-
           </motion.div>
 
           {/* showAll */}
@@ -44,9 +38,6 @@ function SectionThreeClient({ data }) {
           </div>
         </div>
       </section>
-
-      {/* ✅ PASS DATA TO DIALOG */}
-     
     </>
   );
 }

@@ -24,7 +24,7 @@ function CheckOutCard() {
       <Card className="pt-0 overflow-hidden">
         <CardTitle>
           {/* order overview */}
-          <h2 className="flex items-center justify-start gap-3 bg-blue-700 text-white py-5 px-3">
+          <h2 className="flex items-center justify-start gap-3 bg-[#0A4DB8] text-white py-5 px-3">
             <FiShoppingBag className="text-lg md:text-2xl" />
             <span className="capitalize text-lg md:text-2xl font-bold">
               Order Overview
@@ -41,7 +41,7 @@ function CheckOutCard() {
                 className="border-0 focus-visible:ring-0 focus-visible:ring-offset-0 px-4 py-2 md:w-sm xl:w-xs"
               />
 
-              <button className="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 text-sm font-medium transition-all duration-200">
+              <button className="bg-[#0A4DB8] hover:bg-blue-700 text-white px-4 py-2 text-sm font-medium transition-all duration-200">
                 Apply
               </button>
             </div>
@@ -108,14 +108,14 @@ function CheckOutCard() {
               <span className="capitalize font-bold text-black text-lg md:text-xl">
                 Grand Total
               </span>
-              <span className="text-blue-700 font-bold text-xl md:text-2xl">
+              <span className="text-[#0A4DB8] font-bold text-xl md:text-2xl">
                 Rs. 1000
               </span>
             </div>
             <Separator className="bg-blue-700" />
 
             {/* complete purchase */}
-            <div className="rounded-full w-full flex items-center justify-center gap-3 bg-blue-700 py-3 cursor-pointer group">
+            <div className="rounded-full w-full flex items-center justify-center gap-3 bg-[#0A4DB8] py-3 cursor-pointer group">
               <span className="font-bold text-white text-lg md:text-xl">
                 Complete Purchase
               </span>

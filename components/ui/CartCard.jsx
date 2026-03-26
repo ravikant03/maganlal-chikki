@@ -16,7 +16,7 @@ import { MdDelete } from "react-icons/md";
 import { useDispatch } from "react-redux";
 import { removeFromCart, updateQuantity } from "@/redux/features/cart/cart.Slice";
 
-function CartCard({ product }) {
+function CartCard({ product}) {
   const dispatch = useDispatch();
 
   const increaseQuantity = () => {

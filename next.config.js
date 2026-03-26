@@ -4,7 +4,7 @@ module.exports = {
       {
         protocol: "https",
         hostname: "maganlalchikki.in",
-        pathname: "/wp-content/uploads/2020/03/**",
+        pathname: "/wp-content/uploads/**",
       },
       {
         protocol: "https",

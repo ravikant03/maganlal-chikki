@@ -10,6 +10,8 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "@/redux/features/cart/cart.Slice";
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { addToWishlist } from "@/redux/features/wishlist/wishlist.Slice";
+import { HiOutlineShoppingBag } from "react-icons/hi";
 
 function ProductCard({ product }) {
   // console.log(product);
@@ -19,6 +21,11 @@ function ProductCard({ product }) {
   const handleClick = (product) => {
     dispatch(addToCart(product));
     toast.success("Item added to cart 🛒");
+  };
+
+  const handleWhislist = (product) => {
+    dispatch(addToWishlist(product));
+    toast.success("Item added to your whislist");
   };
 
   return (
@@ -52,7 +59,16 @@ function ProductCard({ product }) {
                   >
                     <FiEye className="text-xl" />
                   </div>
-                  <div className="flex items-center justify-center p-2 bg-white rounded-full w-fit  hover:-translate-y-2 duration-150">
+                   <div
+                    className="flex items-center justify-center p-2 bg-white rounded-full w-fit  hover:-translate-y-2 duration-150"
+                    onClick={() => handleClick(product)}
+                  >
+                    <HiOutlineShoppingBag className="text-xl" />
+                  </div>
+                  <div
+                    className="flex items-center justify-center p-2 bg-white rounded-full w-fit  hover:-translate-y-2 duration-150"
+                    onClick={() => handleWhislist(product)}
+                  >
                     <IoMdHeartEmpty className="text-xl" />
                   </div>
                 </div>
